@@ -1,0 +1,30 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  background: linear-gradient(
+    80deg,
+    rgba(85, 7, 115, 1) 0%,
+    rgb(75, 18, 82) 35%,
+    rgba(223, 207, 221, 1) 100%
+  );
+}
+
+.card {
+  color: rgb(14, 2, 12);
+  background-color: rgb(128, 5, 89);
+  text-align: center;
+}
+
+.imagen {
+  border-radius: 80%;
+}
