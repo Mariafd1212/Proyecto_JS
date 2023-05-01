@@ -76,3 +76,94 @@ function calculoIva(idioma) {
 }
 //Llamando el resultado por la consola
 console.log(calculoIva(idioma));
+
+//Objetos
+class User {
+  constructor(nombre, clave, mail) {
+    this.nombre = nombre;
+    this.clave = clave;
+    this.mail = mail;
+  }
+
+  presentar() {
+    console.log("Hola soy " + this.nombre);
+  }
+}
+const user1 = new User("Maria", "12345", "mariafd2424@gmail.com");
+user1.presentar();
+
+class Producto {
+  constructor(nombre, precio) {
+    this.nombre = nombre.toUpperCase();
+    this.precio = parseFloat(precio);
+    this.agotado = false;
+  }
+  sumaIva() {
+    this.precio = this.precio * 1.21;
+  }
+  vender() {
+    this.agotado = true;
+  }
+}
+const producto1 = new Producto("Ingles", "50");
+const producto2 = new Producto("Japones", "80");
+
+producto1.sumaIva();
+producto2.sumaIva();
+
+console.log(producto1.agotado);
+
+producto1.vender();
+
+console.log(producto1.agotado);
+
+//Arrays
+const participantesSorteo = [
+  "Maria Flores",
+  "Leonardo Arias",
+  "Tomás Jimenez",
+  "Victoria Remirez",
+  "Cristian Miglionico",
+  "Patricia Perez",
+  "Erick Leprito",
+  "Matias Povesi",
+  "Ana Quevedo",
+  "Melina Flores",
+  "Natalia Quintero",
+  "Pedro Tomatti",
+  "Laura Nava",
+];
+
+let random = Math.random() * participantesSorteo.length;
+random = Math.floor(random);
+
+console.log(participantesSorteo[random]);
+
+/* //Calendario
+const calendar = [
+  "Lunes",
+  "Martes",
+  "Miercoles",
+  "Jueves",
+  "Viernes",
+  "Sábado",
+  "Domingo",
+];
+
+class Tabla {
+  construct(clr) {
+    this.cuadro = document.createElement("div");
+    this.cuadro.innerHTML = clr;
+    this.cuadro.style.backgroundColor = clr;
+    this.cuadro.style.height = "40px";
+    this.cuadro.style.width = "40px";
+    this.cuadro.style.margin = "1px";
+  }
+}
+
+for (let i = 0; i < 31; i++) {
+  let cuadroLunes = new Tabla(calendar[i % 7]);
+  cuadroLunes.cuadro.innerHTML = i;
+  document.getElementById("calendar").appendChild(cuadroLunes.cuadro);
+}
+ */
