@@ -1,5 +1,5 @@
 //Bienvenida
-let nombreIngresado = prompt("Ingrese su nombre ");
+/* let nombreIngresado = prompt("Ingrese su nombre ");
 alert("Bienvenido/a " + nombreIngresado);
 
 var idiomaElegido = prompt("Que idioma deseas aprender?");
@@ -75,7 +75,7 @@ function calculoIva(idioma) {
   }
 }
 //Llamando el resultado por la consola
-console.log(calculoIva(idioma));
+console.log(calculoIva(idioma)); */
 
 //Objetos
 class User {
@@ -137,7 +137,18 @@ const participantesSorteo = [
 let random = Math.random() * participantesSorteo.length;
 random = Math.floor(random);
 
-console.log(participantesSorteo[random]);
+alert("La/El ganador(a) es" + " " + participantesSorteo[random]);
+
+//Métodos
+const cursos = [
+  { nombre: "Ingles", precio: 20000 },
+  { nombre: "Japones", precio: 30000 },
+  { nombre: "Aleman", precio: 40000 },
+  { nombre: "Frances", precio: 50000 },
+];
+
+const resultado = cursos.filter((curso) => curso.nombre.includes("Ingles"));
+console.log(resultado);
 
 /* //Calendario
 const calendar = [
