@@ -1,5 +1,5 @@
-//Bienvenida
-/* let nombreIngresado = prompt("Ingrese su nombre ");
+/* //Bienvenida
+let nombreIngresado = prompt("Ingrese su nombre ");
 alert("Bienvenido/a " + nombreIngresado);
 
 var idiomaElegido = prompt("Que idioma deseas aprender?");
@@ -27,7 +27,7 @@ if (idiomaElegido == "ingles") {
 
 //Ciclos
 for (let turnos = 1; turnos <= 30; turnos++) {
-  let claseAgendada = prompt("Quisieras agendar su primera clase gratis?");
+  let claseAgendada = prompt("Quisieras agendar su primera clase?");
   if (claseAgendada == "no") {
     alert(
       "Gracias por visitarnos, nos vemos cuando te decidas a tomar un curso!"
@@ -86,10 +86,21 @@ class User {
   }
 
   presentar() {
-    console.log("Hola soy " + this.nombre);
+    alert(
+      "Hola" +
+        " " +
+        this.nombre +
+        "Tu usuario de acceso es" +
+        " " +
+        this.mail +
+        " " +
+        "y tu clave es" +
+        " " +
+        this.clave
+    );
   }
 }
-const user1 = new User("Maria", "12345", "mariafd2424@gmail.com");
+const user1 = new User("Bruno", "12345", "bruno@gmail.com");
 user1.presentar();
 
 class Producto {
@@ -123,6 +134,7 @@ const participantesSorteo = [
   "Leonardo Arias",
   "Tomás Jimenez",
   "Victoria Remirez",
+  "Bruno Mars",
   "Cristian Miglionico",
   "Patricia Perez",
   "Erick Leprito",
@@ -137,6 +149,7 @@ const participantesSorteo = [
 let random = Math.random() * participantesSorteo.length;
 random = Math.floor(random);
 
+alert("Da click en aceptar para saber si eres el ganador de un curso gratis!");
 alert("La/El ganador(a) es" + " " + participantesSorteo[random]);
 
 //Métodos
@@ -147,34 +160,11 @@ const cursos = [
   { nombre: "Frances", precio: 50000 },
 ];
 
-const resultado = cursos.filter((curso) => curso.nombre.includes("Ingles"));
-console.log(resultado);
-
-/* //Calendario
-const calendar = [
-  "Lunes",
-  "Martes",
-  "Miercoles",
-  "Jueves",
-  "Viernes",
-  "Sábado",
-  "Domingo",
-];
-
-class Tabla {
-  construct(clr) {
-    this.cuadro = document.createElement("div");
-    this.cuadro.innerHTML = clr;
-    this.cuadro.style.backgroundColor = clr;
-    this.cuadro.style.height = "40px";
-    this.cuadro.style.width = "40px";
-    this.cuadro.style.margin = "1px";
-  }
-}
-
-for (let i = 0; i < 31; i++) {
-  let cuadroLunes = new Tabla(calendar[i % 7]);
-  cuadroLunes.cuadro.innerHTML = i;
-  document.getElementById("calendar").appendChild(cuadroLunes.cuadro);
-}
- */
+const resultado1 = cursos.filter((curso) => curso.nombre.includes("Ingles"));
+console.log(resultado1);
+const resultado2 = cursos.filter((curso) => curso.nombre.includes("Japones"));
+console.log(resultado2);
+const resultado3 = cursos.filter((curso) => curso.nombre.includes("Frances"));
+console.log(resultado3);
+const resultado4 = cursos.filter((curso) => curso.nombre.includes("Aleman"));
+console.log(resultado4);
