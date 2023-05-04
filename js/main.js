@@ -1,4 +1,4 @@
-/* //Bienvenida
+//Bienvenida
 let nombreIngresado = prompt("Ingrese su nombre ");
 alert("Bienvenido/a " + nombreIngresado);
 
@@ -75,7 +75,7 @@ function calculoIva(idioma) {
   }
 }
 //Llamando el resultado por la consola
-console.log(calculoIva(idioma)); */
+console.log(calculoIva(idioma));
 
 //Objetos
 class User {
