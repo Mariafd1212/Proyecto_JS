@@ -3,7 +3,7 @@ let nombreIngresado = prompt("Ingrese su nombre ");
 alert("Bienvenido/a " + nombreIngresado);
 
 var idiomaElegido = prompt("Que idioma deseas aprender?");
-console.log("Buscando el curso...");
+console.log("Verás el precio del curso en la consola");
 
 //Decalaración de variables y constantes
 let costoIngles = 50;
